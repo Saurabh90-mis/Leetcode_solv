@@ -1,5 +1,11 @@
 class Solution {
     public boolean checkString(String s) {
-         return !s.contains("ba");
+         char[] ch = s.toCharArray();
+        for(int i=0; i<s.length()-1; i++){
+            if(ch[i]=='b'&&ch[i+1]=='a'){
+                return false;
+            }
+        }
+        return true;
     }
 }
